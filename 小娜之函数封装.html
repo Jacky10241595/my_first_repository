@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 需要实现的功能:
+    //  1.计算总和
+    //  2.获取时间
+    //  3.弹出笑话
+    //  4.弹出一个输入框,让用户根据提示输入
+
+    // 第一个函数封装-小于10补全0的封装
+    function patchZero(number) {
+        if (number < 10) {
+            number = '0' + number;
+        }
+        return number;
+    }
+    // 第二个函数封装-获得时间
+    function formatdate() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        // 判断是否小于10
+        month = patchZero(month);
+        day = patchZero(day);
+        hour = patchZero(hour);
+        minute = patchZero(minute);
+        second = patchZero(second);
+        var time = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+        return time;
+    }
+
+    // 第三个封装-求和
+    function getSum(arr){
+        var sum = 0;
+                for (var i = 0; i < arr.length; i++) {
+                    sum += parseFloat(arr[i]);
+                }
+                return sum;
+    }
+    // 第四个封装-输入1
+    function inputOne(){
+        var numbers = prompt('请输入要求和的数字,用逗号隔开,如:1,2,3,4');
+        var arr = numbers.split(',');
+        var sum=getSum(arr);
+        return sum;
+    }
+
+    //1.不知循环多少次,所以用while
+    while (true) {
+        // 2.弹出输入框,提醒用户输入,用\n进行换行
+        var msg = prompt('我是传智小娜,你的语音助手\n' +
+            '输入编号或<关键词>选择服务,输入q选择退出\n' +
+            '1.计算<总和>\n' +
+            '2.获取<时间>\n' +
+            '3.看到<笑话>');
+
+        // 3.如果输入q,终止循环
+        if (msg === 'q') {
+            alert('下次再见');
+            break;
+        }
+
+        // 4.判断都是固定值,所以用switch-case
+        switch (msg) {
+            // 一.求和
+            case '1':
+            case '总和':
+                var sum=inputOne();
+                alert('你要的总和是:' + sum);
+                break;
+
+            //    二 获取时间
+            case '2':
+            case '时间':
+                var time = formatdate();
+                // console.log('当前时间是:'+time);
+                alert('当前时间是:' + time);
+                break;
+
+            // 三.笑话
+            case '3':
+            case '笑话':
+                var joke = ['笑话1', '笑话2', '笑话3', '笑话4', '笑话5'];
+                var r = Math.floor(Math.random() * joke.length);
+                alert(joke[r]);
+                console.log(joke[r]);
+                break;
+            default:
+                alert('您的话小娜没听懂,please again');
+                break;
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 第一遍
+    // function Car(brand, color, price, weight) {
+    //     this.brand = brand;
+    //     this.color = color;
+    //     this.price = price;
+    //     this.weight = weight;
+    //     this.startUp=function(){
+    //         console.log('轰轰轰');
+    //     };
+    //     this.turnOff=function(){
+    //         console.log('熄火了');
+    //     }
+    // }
+    // var car1=new Car('BMW','black','1million','2T');
+    // console.log(car1);
+    // car1.startUp();
+    // car1.turnOff();
+
+    // 第二遍
+    // function Computer(brand,color,price,weight){
+    //     this.brand=brand;
+    //     this.color=color;
+    //     this.price=price;
+    //     this.weight=weight;
+    //     this.turnOn=function(){
+    //         console.log('10秒开机');
+    //     };
+    //     this.work=function(){
+    //         console.log('I7处理器,运行速度快,散热好');
+    //     };
+    // }
+    // var computer1=new Computer('华硕','grey','5k','2kg');
+    // console.log(computer1);
+    // computer1.turnOn();
+    // computer1.work();
+
+    // 第三遍
+    // function Person(name,gender,age){
+    //     this.name=name;
+    //     this.age=age;
+    //     this.gender=gender;
+    //     this.Greet=function(){
+    //       console.log('大家好,我是'+name+',我是'+gender+'的,我'+age+'岁了');
+    //     }
+    // }
+    // var person1=new Person('张三','男',12);
+    // console.log(person1);
+    // person1.Greet()
+
+    // Take four
+    function Shoes(brand, price, color) {
+        this.brand = brand;
+        this.price = price;
+        this.color = color;
+        this.gn = function () {
+            console.log('穿上后身轻如燕,健步如飞,还能增高');
+        }
+    }
+    var shoes1 = new Shoes('converse', '$200', 'yellow');
+    console.log(shoes1);
+    shoes1.gn();
+</script>
+
+</html>
