@@ -42,17 +42,23 @@
     // console.log(res);
 
     // splice,用于在数组中的指定位置移除.插入.替换元素
-    var arr = ['a', 'b', 'c', 'd', 'e'];
-    // 把 c d 元素移除
-    // arr.splice(2, 2);//第一个2指索引,第二个2指移除元素的个数
-    // console.log(arr);
-    // 在 d 后面添加2和3两个元素
-    // arr.splice(4,0,2,3);//从索引4开始加,移除0个,将2,3插入
+    // var arr = ['a', 'b', 'c', 'd', 'e'];
+    // // 把 c d 元素移除
+    // // arr.splice(2, 2);//第一个2指索引,第二个2指移除元素的个数
+    // // console.log(arr);
+    // // 在 d 后面添加2和3两个元素
+    // // arr.splice(4,0,2,3);//从索引4开始加,移除0个,将2,3插入
+    // // console.log(arr);
+
+    // // 把 e 元素替换成 5 
+    // arr.splice(4,1,5);//从索引4替换,换1个,用5替换
     // console.log(arr);
 
-    // 把 e 元素替换成 5 
-    arr.splice(4,1,5);//从索引4替换,换1个,用5替换
-    console.log(arr);
+    // forEach,用于遍历数组
+    var arr=[1,2,3,4,5];
+    arr.forEach(function(e,i){
+        console.log(e,i);//e指数组中的元素,i指索引
+    })
 </script>
 
 </html>
