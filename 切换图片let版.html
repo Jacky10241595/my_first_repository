@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="row">
+            <input type="button" value="jacky1">
+            <input type="button" value="jacky2">
+            <input type="button" value="jacky3">
+            <input type="button" value="jacky4">
+        </div>
+        <div class="row"><img src="./images/01.jpg"></div>
+    </div>
+</body>
+<script>
+    let btn = document.getElementsByTagName('input');
+    let img = document.getElementsByTagName('img');
+    for (let i = 0; i < btn.length; i++) {
+        btn[i].onclick = function () {
+            img[0].src = './images/0' + (i + 1) + '.jpg'
+        }
+    }
+</script>
+
+</html>

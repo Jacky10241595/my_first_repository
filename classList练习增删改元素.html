@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .aa {
+            height: 100px;
+            width: 100px;
+            background-color: aqua
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" class="a b c"></div>
+    <input type="button" value="切换" id="btn">
+</body>
+<script>
+    let box = document.getElementById('box');
+    // classList.add:添加类名
+    box.classList.add('e', 'f');
+    console.log(box.classList);
+    // classList.remove:删除类名
+    box.classList.remove('a');
+    console.log(box.classList);
+
+    // classList.toggle:切换类名
+    let btn = document.getElementById('btn');
+    btn.onclick = function () {
+        box.classList.toggle('aa')
+    }
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="开关灯" id="btn">
+</body>
+<script>
+    // 1.文字是开灯,把body变白,关灯则变黑
+    // 2.步骤:获取按钮--注册点击事件--在事件处理程序中判断文字,关灯则body变黑,同时按钮文字要变为开灯
+    var btn = document.getElementById('btn');
+    btn.onclick = function () {
+        if (btn.value === '关灯') {
+            document.body.style.backgroundColor = '#ccc';
+            btn.value = '开灯';//把按钮的value属性,也就是文字变成开灯
+        } else {
+            document.body.style.backgroundColor = '#fff';
+            btn.value = '关灯';
+        }
+    }
+</script>
+
+</html>
